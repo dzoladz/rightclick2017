@@ -9,7 +9,7 @@ Slides are built upon [reveal.js](https://github.com/hakimel/reveal.js). There i
 
 #### Local Development
 
-1. Navigate to `/path/to/rightclish2017`. Serve the presentation and monitor source files for changes.
+1. Navigate to `/path/to/rightclick2017`. Serve the presentation and monitor source files for changes.
    ```sh
    $ npm start
    ```
@@ -18,11 +18,8 @@ Slides are built upon [reveal.js](https://github.com/hakimel/reveal.js). There i
 
 #### Navigate 
 
-<kbd>f</kbd>: Fullscreen
-
-<kbd>ESC</kbd>: Exit fullscreen
-
-<kbd>s</kbd>: View speaker notes
-
-<kbd>.</kbd>: Pause
+- <kbd>f</kbd>: Fullscreen
+- <kbd>ESC</kbd>: Exit fullscreen
+- <kbd>s</kbd>: View speaker notes
+- <kbd>.</kbd>: Pause
 
