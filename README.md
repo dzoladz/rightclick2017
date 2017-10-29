@@ -1,4 +1,1 @@
-Beam me up, Scotty 
-
-Presentation for Ohio Library Council, RightClick2017
-
+"Beam Me Up, Scotty" is a presentation for the Ohio Library Council's event, RightClick 2017, at the State Library of Ohio. RightClick 2017 is an annual one-day conference for sharing IT ideas, solutions, and best practices by and for library IT staff and administrators. You can [view the presentation](https://dzoladz.github.io/rightclick2017/), if you'd like.
