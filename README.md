@@ -2,6 +2,9 @@
 
 You can view the [RightClick 2017 presentation](https://dzoladz.github.io/rightclick2017/), if you'd like.
 
+
+## reveal.js
+
 Slides are built upon [reveal.js](https://github.com/hakimel/reveal.js). There is a [demo](http://lab.hakim.se/reveal-js/#/) available.
 
 #### Local Development
@@ -16,6 +19,10 @@ Slides are built upon [reveal.js](https://github.com/hakimel/reveal.js). There i
 #### Navigate 
 
 <kbd>f</kbd>: Fullscreen
+
 <kbd>ESC</kbd>: Exit fullscreen
+
 <kbd>s</kbd>: View speaker notes
+
 <kbd>.</kbd>: Pause
+
