@@ -19,7 +19,55 @@ Slides are built upon [reveal.js](https://github.com/hakimel/reveal.js). There i
 #### Navigate 
 
 - <kbd>f</kbd>: Fullscreen
-- <kbd>ESC</kbd>: Exit fullscreen
+- <kbd>ESC</kbd>: Show slide explorer / Exit fullscreen
 - <kbd>s</kbd>: View speaker notes
 - <kbd>.</kbd>: Pause
+- <kbd>?</kbd>: Show keyboard shortcuts
 
+## Evergreen: Test Server Build
+
+The following procedure takes advantage of the Ansible work of Bill Erickson, King County Library System.
+
+You'll need to have a server running Ubuntu 16.04 LTS. I've got this running on a local VM on VirtualBox to experiment with making aesthetic changes or to explore new features in each release. You'll need to allocate about 4GB of RAM to the machine.
+
+Using the auto-installer script, services should only be listening on 127.0.0.1 by default. Assuming you establish a sane firewall configuration, you could also deploy this to Amazon EC2, Microsoft Azure, or Google Cloud Platfrom. One caveat to doing so, the auto-installer essentially follows the procedures for installing and configuring OpenSRF and Evergreen from the Evergreen-ILS website. As such, they use well-known passwords for the Ejabberd and Postgres accounts. This should not be a huge concern by itself. The script also sets Evergreen to use Rsyslog and NGINX, but the community instruction do not. These settings and passwords can be changed in settings.yml.
+
+#### Install Git and Ansible
+```bash
+sudo apt-get install git ansible
+```
+#### Clone
+```bash
+git clone --branch collab/berick/ansible-installer-ubuntu-16.04  git://git.evergreen-ils.org/working/random.git
+```
+#### Change to `/random` directory
+```bash
+cd random
+```
+#### Run
+```bash
+sudo ansible-playbook playbook.yml -e "hosts=127.0.0.1"
+```
+In Chrome, or Firefox, navigate to `https://<HOSTNAME>/eg/staff/` and click through the SSL warning to access the staff client.
+
+## Further Exploration
+
+#### Consortium of Ohio Libraries
+- Consortium of Ohio Libraries [Website](http://info.cool-cat.org/)
+- COOL-CAT [Consortial Catalog](http://cool-cat.org/eg/opac/home)
+
+#### Documentation
+- Evergreen: Database Schema [master](http://docs.evergreen-ils.org/dev/schema/)
+- Evergreen: System Configuration and Customization [HTML](http://docs.evergreen-ils.org/3.0/_system_configuration_and_customization.html)
+
+#### Tools
+There are so many possible tools that it's laughable to create a list. For the sake of providing some potentials, here you go:
+- Equinox Migration Tools `git clone git://git.esilibrary.com/migration-tools.git`
+- pymarc [GitHub](https://github.com/edsu/pymarc)
+- PgAdmin [Website](https://www.pgadmin.org/)
+- Sequel Pro [Website](https://www.sequelpro.com/)
+- MarcEdit [Website](http://marcedit.reeset.net/)
+
+#### Presentations
+- Jason Etheridge, Staging Migrations for Success [Slides](http://tinyurl.com/EGmigrations2)
+- The Usual Suspects (De-duplication Methods in Evergreen) [Slides](https://goo.gl/kKf1AO)
