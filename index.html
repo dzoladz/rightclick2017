@@ -113,9 +113,9 @@
 				</section>
 				
 				<!-- 5 major steps -->
-				<section data-background="#2b2b2b">		
+				<section>
 					<!-- Planning and Preparation -->
-					<section>
+					<section data-background="#2b2b2b">
 						<h2 style="color:white;">Planning</h2>
 						<ul style="color:white;">
 							<p class="fragment">Write down any steps in the migration.</p>
@@ -141,7 +141,7 @@
 					<section data-background="#2b2b2b">
 						<h2 style="color:white;">Data Manipulation</h2>
 						<ul style="color:white;">
-							<p class="fragment"><strong>OMG:</strong> Did we really do that?</p>
+							<p class="fragment"><strong>OMG:</strong> So many opportunities for improvement</p>
 							<p class="fragment"><strong>SCRIPTING:</strong> PERL, Python, MarcEdit .task</p>
 							<p class="fragment"><strong>CLONE ME:</strong> ILS-specific tools, file conversions, .py .pl .sql<br/>
 						</ul>
@@ -151,9 +151,9 @@
 					<!-- Data Ingestion -->
 					<section data-background="#2b2b2b">
 						<h2 style="color:white;">Data Ingestion</h2>
-						<ul>
-							<p class="fragment"><strong>Evergreen:</strong> PostgreSQL, OpenSRF, XML, XMPP, PERL</p>
-							<p class="fragment"></p>
+						<ul style="color:white;">
+							<p class="fragment"><strong>EVERGREEN:</strong> PostgreSQL, OpenSRF, XML, XMPP, PERL</p>
+							<p class="fragment">For anything but a few 1000 records, you'll need to load from the command line.</p>
 						</ul>
 					</section>
 						
@@ -270,6 +270,7 @@ actor.org_unit -- bring in their libraries
 	passwrd text
 );
 </code></pre>
+				<a href="http://tinyurl.com/EGmigrations2">Staging Tables: Jason Etheridge</a>
 				</section>
 				<section data-background="#2b2b2b">
 				<p style="color:white;">Activate Transporter</p>
