@@ -30,26 +30,308 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-			
-				<!-- TITLE SLIDE
-				********************** -->	
-				<section style="color:white;" data-background-video="gifs/enterprise.mp4" data-background-video-loop data-background-video-muted >
+
+<!-- SLIDES: OPEN -->
+
+				<!-- TITLE/INTRO SLIDE
+				********************** -->
+				
+				<section style="color:white;"  data-background="#dddddd" data-background-video="gifs/enterprise.mp4" data-background-video-loop data-background-video-muted >
 					<h3 style="color:white;">"Beam Me Up, Scotty"</h3>
 					<p>Migrating into an Evergreen Consortium</p>
 					<br/>
+					<br/>
 					<p class="fade-in">Derek C. Zoladz, OhioNET</p>
 					<p>Project Coordinator, Consortium of Ohio Libraries</p>
-					
-					<!-- notes -->
 					<aside class="notes">
 					Epic Trailer Slide
 					</aside>
 				</section>
 				
-<!-- Configuration Options -->				
+				
+				<!-- 
+				SETTING AGENDA & EXPECTATIONS
+				****************************** -->
+
+				<section style="color:white;" data-transition="slide" data-background-image="gifs/traveling-enterprise.gif" data-background-video-loop data-background-video-muted>
+					<h2 style="color:white;">Today's Agenda</h2>
+					<ul>
+						<p class="fragment">Hover over the MIGRATION PROCESS</p>
+						<p class="fragment">WARP to a distress call from an unknown species</p>
+						<p class="fragment">RESCUE A COLONY from a dying planet</p>
+						<p class="fragment">Set a course for FURTHER EXPLORATION</p>
+					</ul>
+				</section>			
+				
+				
+				<!-- PART 1. HOVER OVER THE MIGRATION PROCESS
+				******************** -->
+				<section data-transition="slide-out" data-background-image="img/mars-lookalike.jpg">
+					<h2 style="color:white;">From a distance...</h2>
+					<small style="color:white;">All migrations are the same</small>
+				</section>
+				
+				<!-- Questioning/Ideation Phase -->
+				<section data-background="#aaa">
+					<section>
+						<h2>QUESTION GENERATION</h2>
+					</section>
+					<section>
+						<p data-autoslide="1000">Am I going to need to <strong>learn new skills</strong>?</p>
+    					<p data-autoslide="1000" class="fragment fade">How long is this going to take to complete?</p>
+						<p data-autoslide="1000" class="fragment fade">Is this an <strong>opportunity</strong> for a shelving reorganization?</p>
+    					<p data-autoslide="1000" class="fragment fade">Should we <strong>standardize barcodes</strong> for patrons and items?</p>
+    				</section>
+    				<section>
+    					<p data-autoslide="1000" class="fragment fade">Will we need to <strong>modify library policies</strong> or maintain our current policies?</p>
+    					<p data-autoslide="1000" class="fragment fade">Are there tools available to speed up the process?</p>
+    					<p data-autoslide="1000" class="fragment fade">Will I need to learn to catalog in a different way?</p>
+    					<p data-autoslide="1000" class="fragment fade">Do we have the <strong>skills internally</strong>?</p>
+    				</section>
+    				<section>
+    					<p data-autoslide="1000" class="fragment fade">Will our use of MARC fields need to change?</p>
+    					<p data-autoslide="1000" class="fragment fade">Should we migrate all of our patron records?</p>
+    					<p data-autoslide="1000" class="fragment fade">Do we *really* need to weed our collection?</p>
+    					<p data-autoslide="1000" class="fragment fade">What in the world is a <strong>circulation modifier</strong>?</p>
+    				</section>
+    				<section>
+    					<p data-autoslide="1000" class="fragment fade">What legacy functionality will we need to furnish elsewhere?</p>
+    					<p data-autoslide="1000" class="fragment fade">Should we migrate or refresh our authority records?</p>
+    					<p data-autoslide="1000" class="fragment fade">Is that item *really* coming back?</p>
+    					<p data-autoslide="1000" class="fragment fade">Where do I go for help when I need it?</p>
+    				</section>
+    				<section>
+    					<p data-autoslide="1000" class="fragment fade">How much time should I allocate to each task?</p>
+    					<p data-autoslide="1000" class="fragment fade">Is this an opportunity for patron fine forgiveness?</p>
+    					<p data-autoslide="1000" class="fragment fade">What criteria should I use to weed patron records?</p>
+    					<p data-autoslide="1000" class="fragment fade">What new functionality will be able to take advantage of?</p>
+    				</section>
+    				<section>
+    					<p data-autoslide="1000" class="fragment fade">Are the staff onboard?</p>
+    					<p data-autoslide="1000" class="fragment fade">Am I ready to make the switch?</p>
+					</section>
+				</section>
+				
+				<!-- 5 major steps -->
+				<section data-background="#2b2b2b">		
+					<!-- Planning and Preparation -->
+					<section>
+						<h2 style="color:white;">Planning</h2>
+						<ul style="color:white;">
+							<p class="fragment">Write down any steps in the migration.</p>
+							<p class="fragment">Break those steps down into smallish tasks.</p>
+							<p class="fragment">Order steps. Work backwards from launch date.</p>
+							<p class="fragment">Assign responsibility for each task or deliverable.</p>
+							<p class="fragment">Get to it and check in weekly or so.</p>
+						</ul>
+					</section>
+						
+					<!-- Data Extraction -->
+					<section data-background="#2b2b2b">
+						<h2 style="color:white;">Data Extraction</h2>
+						<ul style="color:white;">
+							<p class="fragment"><strong>DIRECT DB:</strong> psql, PgAdmin, Sequel Pro, PHPmyAdmin</p>
+							<p class="fragment"><strong>ILS FUNCTIONS:</strong> Export data, report generation</p>
+							<p class="fragment"><strong>THIRD PARTY:</strong> III exit services, Equinox</p>
+							<p class="fragment">Explore data. Identify procedures. Formalize.</p>
+						</ul>
+					</section>
+						
+					<!-- Data Manipulation -->
+					<section data-background="#2b2b2b">
+						<h2 style="color:white;">Data Manipulation</h2>
+						<ul style="color:white;">
+							<p class="fragment"><strong>OMG:</strong> Did we really do that?</p>
+							<p class="fragment"><strong>SCRIPTING:</strong> PERL, Python, MarcEdit .task</p>
+							<p class="fragment"><strong>CLONE ME:</strong> ILS-specific tools, file conversions, .py .pl .sql<br/>
+						</ul>
+						<pre class="fragment"><code>git clone git://git.esilibrary.com/migration-tools.git</code></pre></p>
+					</section>
+						
+					<!-- Data Ingestion -->
+					<section data-background="#2b2b2b">
+						<h2 style="color:white;">Data Ingestion</h2>
+						<ul>
+							<p class="fragment"><strong>Evergreen:</strong> PostgreSQL, OpenSRF, XML, XMPP, PERL</p>
+							<p class="fragment"></p>
+						</ul>
+					</section>
+						
+					<!-- Feedback/Testing Phase -->
+					<section data-background="#2b2b2b">
+						<h2 style="color:white;">Feedback/Testing Phase</h2>
+					</section>
+				</section>
+				
+				<!-- recap as gif -->
+				<section>
+					<section data-background="#2b2b2b">
+						<h2 style="color:white;">Recapitulation</h2>
+						<small style="color:white;">as .gif</small>
+					</section>
+					<section data-background-image="gifs/data-lol.gif">
+						<h2 style="color:white;">Data Extraction</h2>
+					</section>
+					<section data-background-image="gifs/data-cat.gif">
+						<h2 style="color:white;">Data Manipulation</h2>
+					</section>
+					<section data-background-image="gifs/data-yes.gif">
+						<h2 style="color:white;">Data Ingestion</h2>
+					</section>
+				</section>
+				
+
+				<!-- PART 2. WARP TO A DISTRESS CALL FROM AN UNKNOWN SPECIES
+				******************** -->
+				<section data-background="#2b2b2b">
+					<p style="color:white;">ALERT =></p>
+					<p style="color:yellow;">obligatory code slides ahead</p>
+				</section>
+				<section data-background-image="gifs/warp.gif">
+					<p style="color:white;">Warp to Distress Call</p>
+					<!-- http://www.chakoteya.net/NextGen/223.htm -->
+					<section>
+<pre style="white-space: pre-wrap; color:white; font-size: 20pt;"><strong>DATA:</strong> Captain, I am detecting a transmission emanating from within the system.
+<strong>RIKER:</strong> What sort of signal?
+<strong>DATA:</strong> It is self-repeating, of unknown pattern.
+<strong>PICARD:</strong> Where is it coming from?...
+<strong>RIKER:</strong> It could be a distress call. Helm, take us into transport range.
+</pre>
+					</section>
+				</section>
+				
+				<section>
+					<section data-transition="slide-out" data-background-image="img/mars-lookalike.jpg">
+						<h2 style="color:white;">Send request for DNA</h2>
+						<small style="color:white;">Data Export</small>
+					</section>
+					<section data-background-color="white" data-background-iframe="/file/colony_patron_out.txt">
+					</section>
+				</section>
+				<section data-background="#2b2b2b">
+					<h2 style="color:white;">Species incompatible</h2>
+					<p class="fragment" style="color:white;"><strong>DATA MAPPING:</strong> INLEX, MBLOCK, GENDER</p>
+					<p class="fragment" style="color:white;"><strong>DATA FORMATTING:</strong> Timestamps, Types, Encoding</p>
+					<p class="fragment" style="color:white;"><strong>DISARTICULATING DATA:</strong> Full Name, ## on phone numbers</p>
+					<p class="fragment" style="color:white;"><strong>GENERATE DATA:</strong> Juvenile flag from DOB, for instance</p>
+					<!-- Not fully -->
+				</section>
+				<section data-background="#2b2b2b">
+				<p style="color:white;">pymarc and csv module</p>
+<pre><code>import csv
+infile  = open('/home/scotty/colony_in.csv', "r")
+reader = csv.reader(infile)
+
+outfile  = open('/home/scotty/colony_out.csv', "w",
+              encoding='utf-8')
+              
+writer = csv.writer(outfile,
+                    delimiter=',',
+                    quoting=csv.QUOTE_MINIMAL)
+                    
+for row in reader:
+    writer.writerow(row)
+infile.close()
+outfile.close()
+</pre></code>
+				</section>
+				
+				<!-- PART 3. RESCUE A COLONY FROM A DYING PLANET
+				******************************** -->
+				<section data-background="#2b2b2b">
+					<h2 style="color:white;">Rescue Mission</h2>
+					<small style="color:white;">Data Ingestion</small>
+				</section>
+				<section data-background="#2b2b2b">
+					<h2 style="color:white;">Three crucial tables in the Actor schema</h2>
+					<pre><code data-trim contenteditable>
+actor.usr -- core User object
+actor.card -- library user barcodes
+actor.org_unit -- bring in their libraries
+					</code></pre>
+					<a href="http://docs.evergreen-ils.org/dev/schema/_schema_actor.html" target="_blank">Schema Actor (master)</a>
+				</section>
+				<section data-background="#2b2b2b">
+					<img style="width: 100%; height:100%;" src="/img/actor.usr.png">
+				</section>
+				<section data-background="#2b2b2b">
+					<p style="color:white;">Prepare Colony for Transport</p>
+<pre style="width: 100%"><code>CREATE TABLE s_colony (
+	barcode text,
+	last_name text,
+	first_name text,
+	email text,
+	phone text,
+	profile int DEFAULT 2,
+	ident_type int DEFAULT 3,
+	home_ou int,
+	claims_returned_count int DEFAULT 0,
+	usrname text,
+	passwrd text
+);
+</code></pre>
+				</section>
+				<section data-background="#2b2b2b">
+				<p style="color:white;">Activate Transporter</p>
+<pre style="width: 100%"><code>COPY s_colony (
+	barcode,
+	last_name,
+	first_name,
+	email,
+	phone,
+	home_ou,
+	usrname,
+	passwrd) 
+FROM '/home/scotty/colony_out.csv'
+WITH CSV HEADER;
+</code></pre>
+				</section>
+				<section data-background="#2b2b2b">
+				<p style="color:white;">Bring 'um Onboard</p>
+<pre style="width: 100%"><code>INSERT INTO actor.usr (profile,
+	usrname,
+	email,
+	first_given_name, 
+	family_name,
+	day_phone,
+	home_ou,
+	passwd,
+	ident_type) 
+SELECT profile,
+	s_colony.usrname,
+	email,
+	first_name,
+	last_name,
+	phone,
+	home_ou,
+	passwrd,
+	ident_type
+FROM s_colony;
+</code></pre>
+				</section>
+				<section data-background-video="gifs/drinking.mp4" data-background-video-loop data-background-video-muted>
+					<h2 style="color:white;">Celebrate!</h2>
+				</section>
+
+				
+				<!-- PART 4. SET A COURSE FOR FURTHER EXPLORATION
+				********************** -->
+				<section data-background="#2b2b2b">
+					<h2 style="color:white;">SET A COURSE FOR FURTHER EXPLORATION</h2>
+					<ul>
+						<li style="color:white;">Setting up a Test Instance</li>
+						<li style="color:white;">Other Presentations: Staging Tables & Dedupe</li>
+						<li style="color:white;">Tools</li>
+					<p><a href="https://github.com/dzoladz" target="_blank">https://github.com/dzoladz</a></p>
+				</section>
+					
+
+<!-- SLIDES: CLOSE -->
+
 			</div>
 		</div>
-
+		
+<!-- Configuration Options -->
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
