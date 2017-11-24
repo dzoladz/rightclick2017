@@ -71,3 +71,6 @@ There are so many possible tools that it's laughable to create a list. For the s
 #### Presentations
 - Jason Etheridge, Staging Migrations for Success [Slides](http://tinyurl.com/EGmigrations2)
 - The Usual Suspects (De-duplication Methods in Evergreen) [Slides](https://goo.gl/kKf1AO)
+
+#### Books
+- Migrating Library Data: A Practical Manual [ALA Store](http://www.alastore.ala.org/detail.aspx?ID=11850)
